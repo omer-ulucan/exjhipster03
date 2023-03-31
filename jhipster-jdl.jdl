@@ -1,0 +1,34 @@
+entity Ogrenci{
+	adiSoyadi String
+    ogrNo Integer
+    cinsiyeti Boolean
+    dogumTarihi Instant
+}
+
+entity Sinif{
+	sinifAdi String
+    sinifKodu String
+    brans Brans
+}
+
+entity Ogretmen{
+	adiSoyadi String
+    brans Brans
+}
+
+enum Brans{
+	FRENCH
+    ENGLISH
+    SPANISH
+    TURKISH
+
+}
+
+relationship OneToMany{
+	Sinif to Ogrenci
+}
+
+relationship OneToOne{
+	Sinif to Ogretmen
+}
+

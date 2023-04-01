@@ -22,7 +22,7 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
           
-      - name: Build with Gradle and Push the Google Artifact Repository
+      - name: Build with Maven and Push the Google Artifact Repository
         run:
             mvn compile com.google.cloud.tools:jib-maven-plugin;3.3.1:build \
             -Dspring-boot.run.profiles=prod \

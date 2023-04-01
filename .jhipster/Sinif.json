@@ -1,0 +1,43 @@
+{
+  "applications": "*",
+  "changelogDate": "20230331212406",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "sinif",
+  "fields": [
+    {
+      "fieldName": "sinifAdi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sinifKodu",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brans",
+      "fieldType": "Brans",
+      "fieldValues": "FRENCH,ENGLISH,SPANISH,TURKISH"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Sinif",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "ogretmen",
+      "otherEntityRelationshipName": "sinif",
+      "ownerSide": true,
+      "relationshipName": "ogretmen",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "ogrenci",
+      "otherEntityRelationshipName": "sinif",
+      "relationshipName": "ogrenci",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

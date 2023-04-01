@@ -1,0 +1,33 @@
+{
+  "applications": "*",
+  "changelogDate": "20230331212407",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ogretmen",
+  "fields": [
+    {
+      "fieldName": "adiSoyadi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "brans",
+      "fieldType": "Brans",
+      "fieldValues": "FRENCH,ENGLISH,SPANISH,TURKISH"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ogretmen",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "sinif",
+      "otherEntityRelationshipName": "ogretmen",
+      "ownerSide": false,
+      "relationshipName": "sinif",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

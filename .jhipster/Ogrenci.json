@@ -1,0 +1,39 @@
+{
+  "applications": "*",
+  "changelogDate": "20230331212405",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "ogrenci",
+  "fields": [
+    {
+      "fieldName": "adiSoyadi",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ogrNo",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "cinsiyeti",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "dogumTarihi",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Ogrenci",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "sinif",
+      "otherEntityRelationshipName": "ogrenci",
+      "relationshipName": "sinif",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

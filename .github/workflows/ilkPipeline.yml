@@ -3,7 +3,7 @@ name: Ilk Pipeline
 #triger(tetikleyici)
 on: 
   push:
-      branches: { "main" }
+    branches: [ "main" ]
       
 jobs: 
   docker-login:

@@ -14,12 +14,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       
-      #dockerhub login
+      #dockerhub'a login ol
+      #NOT: Eger repository olarak dockerhub kullanilacaksa repository ismi belirtilmez
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKER_HUB_USER }}
           password: ${{ secrets.DOCKER_HUB_PASSWORD }}
+          
+      - name: Build with Gradle and Push the Google Artifact Repository
+        run:
+            mvn compile com.google.cloud.tools:jib-maven-plugin;3.3.1:build \
+            -Dspring-boot.run.profiles=prod \
+            -Dimage="${{ secrets.DOCKER_HUB_USER }}/jhipsterex03:latest"
 
 
 
